@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.atguigu.atcrowdfunding</groupId>
+  <artifactId>atcrowdfunding-manager-impl</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
+  <name>atcrowdfunding-manager-impl</name>
+  <description>后台管理系统,存放控制器类,业务层实现类(jar)</description>
+  
+  
+	<!-- 指定父工程 -->
+	<parent>
+		<groupId>com.atguigu.atcrowdfunding</groupId>
+		<artifactId>atcrowdfunding-parent</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+		<!-- 引入parent的时候，如果parent就在工作空间里面，直接relativePath指定路径 -->
+		<relativePath>../atcrowdfunding-parent/pom.xml</relativePath>
+	</parent>
+	
+	<!-- 指明依赖关系 之依赖子类工程 -->
+	<dependencies>
+		<dependency>
+			<groupId>com.atguigu.atcrowdfunding</groupId>
+			<artifactId>atcrowdfunding-manager-api</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- 分页 -->
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+				<version>${pagehelper.version}</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+			
+				<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+		</dependency>
+	</dependencies>
+</project>
